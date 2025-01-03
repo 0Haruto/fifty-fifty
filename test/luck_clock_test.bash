@@ -14,7 +14,14 @@ colcon build
 source $dir/.bashrc
 
 # ノードの実行とログの保存
-timeout 5 ros2 run fifty_fifty luck_clock > /tmp/fifty_fifty.log
+timeout 20 bash -c "source $dir/.bashrc && ros2 run fifty_fifty luck_clock" &
+sleep 5  # パブリッシャノードが起動するのを待つ
+
+timeout 20 bash -c "source $dir/.bashrc && ros2 run fifty_fifty listener" > /tmp/fifty_fifty.log 2>&1
+
+# ログファイルの内容を表示（デバッグ用）
+echo "Log file content:"
+cat /tmp/fifty_fifty.log
 
 # ログファイルから特定の文字列を検索して表示
 if grep -q 'Dead' /tmp/fifty_fifty.log; then

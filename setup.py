@@ -20,7 +20,8 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
-            'luck_clock = fifty_fifty.luck_clock:main' 
+            'luck_clock = fifty_fifty.luck_clock:main',
+            'listener = fifty_fifty.listener:main',
         ],
     },
 )
