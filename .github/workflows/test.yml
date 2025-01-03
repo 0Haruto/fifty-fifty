@@ -1,0 +1,13 @@
+name: test
+on: push
+jobs:
+  test:
+    runs-on: ubuntu-22.04
+    container: harutoyamamoto/ubuntu22.04-ros2:latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: build and test
+        run: |
+          rsync -av ./ /root/ros2_ws/src/fifty_fifty/
+          cd /root/ros2_ws
+          bash -xv ./src/fifty_fifty/test/luck_clock_test.bash /root

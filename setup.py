@@ -1,6 +1,6 @@
 from setuptools import find_packages, setup
 
-package_name = 'talker'
+package_name = 'fifty_fifty'
 
 setup(
     name=package_name,
@@ -13,13 +13,14 @@ setup(
     ],
     install_requires=['setuptools'],
     zip_safe=True,
-    maintainer='haruto',
+    maintainer='Haruto Yamamoto',
     maintainer_email='s23c1146pp@s.chibakoudai.jp',
-    description='TODO: Package description',
-    license='TODO: License declaration',
+    description='a package for practice class',
+    license='BSD-3-Clause',
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
+            'luck_clock = fifty_fifty.luck_clock:main' 
         ],
     },
 )

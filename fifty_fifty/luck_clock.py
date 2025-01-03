@@ -5,8 +5,8 @@ from std_msgs.msg import String
 from datetime import datetime
 
 rclpy.init()
-node = Node("talker")
-pub = node.create_publisher(String, "Luck_Clock", 10)
+node = Node("luck_clock")
+pub = node.create_publisher(String, "luck_clock", 10)
 n = 1
 x = 1
 def dead_or_alive():
@@ -42,7 +42,6 @@ def cb():
             msg.data = f"Alive  One more time!    Probability: {n}  Now: {year}"
 
     pub.publish(msg)
-    print(msg.data)
 
 def main():
     node.create_timer(1, cb)

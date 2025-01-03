@@ -1,11 +1,13 @@
 <?xml version="1.0"?>
 <?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
 <package format="3">
-  <name>talker</name>
+  <name>fifty_fifty</name>
   <version>0.0.0</version>
-  <description>TODO: Package description</description>
-  <maintainer email="s23c1146pp@s.chibakoudai.jp">haruto</maintainer>
-  <license>TODO: License declaration</license>
+  <description>a package for practice class</description>
+  <maintainer email="s23c1146pp@s.chibakoudai.jp">Haruto Yamamoto</maintainer>
+  <license>BSD-3-Clause</license>
+  <exec_depend>rclpy</exec_depend>
+  <exec_depend>std_msgs</exec_depend>
 
   <test_depend>ament_copyright</test_depend>
   <test_depend>ament_flake8</test_depend>

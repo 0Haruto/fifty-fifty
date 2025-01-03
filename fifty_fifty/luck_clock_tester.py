@@ -8,7 +8,7 @@ class Listener(Node):
         super().__init__('listener')
         self.subscription = self.create_subscription(
             String,
-            'Luck_Clock',
+            'luck_clock',
             self.listener_callback,
             10)
         self.subscription  # prevent unused variable warning
