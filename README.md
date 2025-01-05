@@ -48,6 +48,6 @@ data: 'Dead  Game Over    Published: 2 trials'
 - `timemsg()`関数は, `dead_or_alive()`関数が`True`の時に「Dead」の文字とそれまでに「Dead」が出た回数（試行回数）を含んだメッセージ, `dead_or_alive()`関数が`False`の時に「Alive」の文字とその時の確率, 現在の日時を含んだメッセージを作成し パブリッシュします.
 - `main()`関数は, ノードを初期化し, タイマーを作成して`timemsg()`関数を1秒毎に呼び出します.
 
-## License
+## ライセンス
 
 このプログラムはBSD-3-Clauseライセンスの下で配布されています。詳細なライセンス情報については,  [LICENSE](LICENSE)ファイルを参照してください.
