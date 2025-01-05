@@ -1,3 +1,6 @@
+#!/usr/bin/python3
+# SPDX-FileCopyrightText: 2025 Haruto Yamamoto
+# SPDX-License-Identifier: BSD-3-Clause
 import rclpy
 import random
 from rclpy.node import Node
@@ -5,13 +8,13 @@ from std_msgs.msg import String
 from datetime import datetime
 
 rclpy.init()
-node = Node("luck_clock")
-pub = node.create_publisher(String, "luck_clock", 10)
+node = Node("luck_clock_node")
+pub = node.create_publisher(String, "luck_clock_topic", 10)
 n = 1
 x = 1
 def dead_or_alive():
     return random.choice([True, False])
-def cb():
+def timemsg():
     global n, x
     now = datetime.now()
     year = now.strftime("%Y")
@@ -44,7 +47,7 @@ def cb():
     pub.publish(msg)
 
 def main():
-    node.create_timer(1, cb)
+    node.create_timer(1, timemsg)
     rclpy.spin(node)
 
 if __name__ == "__main__":
