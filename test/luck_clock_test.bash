@@ -14,10 +14,10 @@ colcon build
 source $dir/.bashrc
 
 # ノードの実行とログの保存
-timeout 20 bash -c "source $dir/.bashrc && ros2 run fifty_fifty luck_clock" &
+timeout 10 bash -c "source $dir/.bashrc && ros2 run fifty_fifty luck_clock" &
 sleep 5  # パブリッシャノードが起動するのを待つ
 
-timeout 20 bash -c "source $dir/.bashrc && ros2 run fifty_fifty listener" > /tmp/fifty_fifty.log 2>&1
+timeout 10 bash "ros2 topic echo /luck_clock" > /tmp/fifty_fifty.log
 
 # ログファイルの内容を表示（デバッグ用）
 echo "Log file content:"
