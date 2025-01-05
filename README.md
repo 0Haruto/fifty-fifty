@@ -41,7 +41,7 @@ data: 'Dead  Game Over    Published: 2 trials'
 ```
 - `Alive`が続けて表示されるほど現在時刻が詳細に見れるようになります. また, １度でも途切れると初期段階の情報に戻ります.
 
-## コードの説明
+## ノードの説明
 `luck_clock.py`
 このスクリプトは, ランダムに「Dead」または「Alive」のメッセージをパブリッシュするROS 2ノードを実装しています.
 - `dead_or_alive()`関数は, ランダムに`True`または`False`を返します.
