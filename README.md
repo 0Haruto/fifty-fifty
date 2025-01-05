@@ -45,7 +45,7 @@ data: 'Dead  Game Over    Published: 2 trials'
 `luck_clock.py`
 このスクリプトは, ランダムに「Dead」または「Alive」のメッセージをパブリッシュするROS 2ノードを実装しています.
 - `dead_or_alive()`関数は, ランダムに`True`または`False`を返します.
-- `timemsg()`関数は, `dead_or_alive()`関数が`True`の時に「Dead」の文字とそれまでに「Dead」が出た回数（試行回数）を含んだメッセージ, `dead_or_alive()`関数が`False`の時に「Alive」の文字とその時の確率, 現在の日時を含んだメッセージを作成し パブリッシュします.
+- `timemsg()`関数は, `dead_or_alive()`関数が`True`の時に「Dead」の文字とそれまでに「Dead」が出た回数（試行回数）を含んだメッセージ, `dead_or_alive()`関数が`False`の時に「Alive」の文字とその時の確率, 現在の日時を含んだメッセージを作成し, `luck_clock_topic`にパブリッシュします.
 - `main()`関数は, ノードを初期化し, タイマーを作成して`timemsg()`関数を1秒毎に呼び出します.
 
 ## ライセンス
