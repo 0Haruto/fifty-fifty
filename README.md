@@ -1,6 +1,6 @@
 # luck_clock
 
-`luck_clock_node`は, ROS 2を使用して１秒毎ランダムに「Dead」または「Alive」のメッセージをトピック`luck_clock_topic`にパブリッシュするノードです.「Alive」と連続でパブリッシュしている時間が長いほど正確に現在時刻も表示されます.
+`luck_clock_node`は, ROS 2を使用して１秒毎, ランダムに「Dead」または「Alive」のメッセージをトピック`luck_clock_topic`にパブリッシュするノードです.「Alive」と連続でパブリッシュしている時間が長いほど正確に現在時刻も表示されます.
 
 ## 必要条件
 
