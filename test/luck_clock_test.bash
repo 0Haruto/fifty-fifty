@@ -4,16 +4,24 @@
 
 dir=~
 [ "$1" != "" ] && dir="$1"
-cd $dir/ros2_ws
-colcon build
+
 source $dir/.bashrc
 
+if [ -d "$dir/ros2_ws" ]; then
+    cd $dir/ros2_ws
+else
+    echo "Directory $dir/ros2_ws does not exist."
+    exit 1
+fi
+
+colcon build
+
 # ノードの実行とログの保存
-timeout 10 bash -c "source $dir/.bashrc && ros2 run fifty_fifty luck_clock" &
-sleep 5
+timeout 20 bash -c "source $dir/.bashrc && ros2 run fifty_fifty luck_clock" &
 
-timeout 10 bash -c "ros2 topic echo /luck_clock_topic" > /tmp/fifty_fifty.log
+timeout 20 bash -c "ros2 topic echo /luck_clock_topic" > /tmp/fifty_fifty.log
 
+sleep 20
 echo "Log file content:"
 cat /tmp/fifty_fifty.log
 if grep -q 'Starting trials' /tmp/fifty_fifty.log; then

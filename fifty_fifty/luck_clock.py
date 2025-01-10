@@ -1,3 +1,6 @@
+#!/usr/bin/python3
+# SPDX-FileCopyrightText: 2025 Haruto Yamamoto
+# SPDX-License-Identifier: BSD-3-Clause
 import rclpy
 import random
 from rclpy.node import Node
@@ -5,8 +8,8 @@ from std_msgs.msg import String
 from datetime import datetime
 
 rclpy.init()
-node = Node("luck_clock_node")
-pub = node.create_publisher(String, "luck_clock_topic", 10)
+node = Node('luck_clock_node')
+pub = node.create_publisher(String, 'luck_clock_topic', 10)
 n = 0
 x = 0
 z = 1
