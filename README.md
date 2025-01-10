@@ -1,6 +1,6 @@
 # luck-clock [![Build Status](https://github.com/0Haruto/fifty-fifty/actions/workflows/test.yml/badge.svg)](https://github.com/0Haruto/fifty-fifty/actions/workflows/test.yml)
 
-`luck_clock_node`は, ROS 2上で動作するノードです. このノードからトピック`luck_clock_topic`にパブリッシュされる運動またはリラックスできる行動が記されたメッセージを実行することで, 短時間でユーザーの気分を切り替えることができます.
+`luck_clock_node`は, ROS 2上で動作するノードです. このノードからトピック`luck_clock_topic`にパブリッシュされる運動またはリラックスできる行動が記されたメッセージを実行することで, 短時間で気分転換をすることができます.
 
 ## 必要な環境
 
