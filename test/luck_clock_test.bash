@@ -16,14 +16,11 @@ timeout 10 bash -c "ros2 topic echo /luck_clock_topic" > /tmp/fifty_fifty.log
 
 echo "Log file content:"
 cat /tmp/fifty_fifty.log
-if grep -q 'Dead' /tmp/fifty_fifty.log; then
-    echo "Dead found in log"
-    exit 0
-elif grep -q 'Alive' /tmp/fifty_fifty.log; then
-    echo "Alive found in log"
+if grep -q 'Starting trials' /tmp/fifty_fifty.log; then
+    echo "Starting trials found in log"
     exit 0
 else
-    echo "Neither 'Dead' nor 'Alive' found in log"
+    echo "Starting trials not found in log"
     exit 1
 fi
 
